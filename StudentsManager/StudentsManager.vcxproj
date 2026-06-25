@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="filemanager.h" />
     <ClInclude Include="list.h" />
     <ClInclude Include="student.h" />
   </ItemGroup>
