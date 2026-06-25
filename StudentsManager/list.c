@@ -175,3 +175,16 @@ void ListModifyAddress(Node* pHead, const char* stuId, const char* newAddress) {
         printf("未找到学号为 %s 的学生，无法修改\n", stuId);
     }
 }
+
+// 按学号修改学生入学年份
+void ListModifyEnrollmentYear(Node* pHead, const char* stuId, int enrollmentYear) {
+    assert(pHead && stuId && enrollmentYear);
+    Node* target = ListFind(pHead, stuId);
+    if (target) {
+        target->stu.enrollmentYear = enrollmentYear;
+        printf("学号 %s 的地址已修改为 %d\n", stuId, enrollmentYear);
+    }
+    else {
+        printf("未找到学号为 %s 的学生，无法修改\n", stuId);
+    }
+}

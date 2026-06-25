@@ -19,6 +19,7 @@ typedef struct student
 	char address[128];			//地址
 	char phoneNumber[32];		//手机号
 	char Email[64];				//邮箱
+	int enrollmentYear;			//入学年份
 }Student;
 
 
