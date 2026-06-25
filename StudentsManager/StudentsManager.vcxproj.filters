@@ -24,6 +24,9 @@
     <ClInclude Include="filemanager.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="jsonmanager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="list.c">
@@ -33,6 +36,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="filemanager.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="jsonmanager.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
