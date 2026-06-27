@@ -30,6 +30,9 @@
     <ClInclude Include="query.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="mainmenu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="list.c">
@@ -45,6 +48,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="query.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mainmenu.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

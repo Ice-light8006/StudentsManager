@@ -188,3 +188,15 @@ void ListModifyEnrollmentYear(Node* pHead, const char* stuId, int enrollmentYear
         printf("未找到学号为 %s 的学生，无法修改\n", stuId);
     }
 }
+
+// 获取链表总长度
+int ListGetLength(Node* pHead)
+{
+    int cnt = 0;
+    Node* tmp = pHead;
+    while (tmp->next != pHead)
+    {
+        cnt++;
+    }
+    return cnt;
+}

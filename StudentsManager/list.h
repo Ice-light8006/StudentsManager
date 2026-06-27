@@ -51,4 +51,7 @@ void ListModifyAddress(Node* pHead, const char* stuId, const char* newAddress);
 // 按学号修改学生入学年份
 void ListModifyEnrollmentYear(Node* pHead, const char* stuId, int enrollmentYear);
 
+//获取链表总长度
+int ListGetLength(Node* pHead);
+
 #endif

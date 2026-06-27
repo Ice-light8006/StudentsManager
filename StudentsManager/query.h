@@ -4,5 +4,6 @@
 #include "list.h"
 void ShowAllSameName(Node* pHead, const char* n);
 void ShowAllSameBirthYear(Node* pHead, int birthyear);
-void ShowAllSameEnrollmentYear(Node* pHead, int enrollmentyear);
+void ShowAllSameEnrollmentYear(Node* pHead, int enteryear);
+void ShowAllInformation(Node* pHead);
 #endif
