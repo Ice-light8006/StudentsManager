@@ -98,12 +98,20 @@ void PageLoop(Node* pHead, int targetShort, int type, int pageSize, int total)
         {
             case 'n':
             case 'N':
-                if(currentPage < totalPage) currentPage++;
+                if (currentPage < totalPage)
+                {
+                    system("cls");
+                    currentPage++;
+                }
                 else printf("已是最后一页，无法下翻\n");
                 break;
             case 'p':
             case 'P':
-                if(currentPage > 1) currentPage--;
+                if (currentPage > 1)
+                {
+                    system("cls");
+                    currentPage--;
+                }
                 else printf("已是第一页，无法上翻\n");
                 break;
             case 'q':
@@ -130,21 +138,21 @@ int CountSameName(Node* pHead, const char* n)
     }
     return cnt;
 }
-void ShowAllSameName(Node* pHead, const char* n)
+int ShowAllSameName(Node* pHead, const char* n)
 {
     assert(pHead && n);
     int total = CountSameName(pHead,n);
     if(total == 0)
     {
-        printf("无改名学生\n");
-        return;
+        printf("无姓名为%s的学生\n",n);
+        return 0;
     }
     printf("一共找到 %d 位同名学生：\n",total);
     const int pageSize = 10;
     PageLoop(pHead, (int)(size_t)n, 1, pageSize, total);
 }
 
-void ShowAllSameBirthYear(Node* pHead, int birthyear)
+int ShowAllSameBirthYear(Node* pHead, int birthyear)
 {
     assert(pHead && birthyear);
     if(birthyear < 1900 || birthyear > 2099)
@@ -177,7 +185,7 @@ void ShowAllSameBirthYear(Node* pHead, int birthyear)
     PageLoop(pHead, targetShort, 2, pageSize, total);
 }
 
-void ShowAllSameEnrollmentYear(Node* pHead, int enteryear)
+int ShowAllSameEnrollmentYear(Node* pHead, int enteryear)
 {
     assert(pHead && enteryear);
     if(enteryear < 1900 || enteryear > 2099)
@@ -210,7 +218,7 @@ void ShowAllSameEnrollmentYear(Node* pHead, int enteryear)
     PageLoop(pHead, targetShort, 3, pageSize, total);
 }
 
-void ShowAllInformation(Node* pHead)
+int ShowAllInformation(Node* pHead)
 {
     assert(pHead);
     Node* cur = pHead->next;

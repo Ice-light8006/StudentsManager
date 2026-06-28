@@ -126,8 +126,10 @@
     <ClInclude Include="filemanager.h" />
     <ClInclude Include="jsonmanager.h" />
     <ClInclude Include="list.h" />
+    <ClInclude Include="main.h" />
     <ClInclude Include="mainmenu.h" />
     <ClInclude Include="query.h" />
+    <ClInclude Include="querymenu.h" />
     <ClInclude Include="student.h" />
   </ItemGroup>
   <ItemGroup>
@@ -135,8 +137,9 @@
     <ClCompile Include="jsonmanager.c" />
     <ClCompile Include="list.c" />
     <ClCompile Include="main.c" />
-    <ClCompile Include="mainmenu.cpp" />
+    <ClCompile Include="mainmenu.c" />
     <ClCompile Include="query.c" />
+    <ClCompile Include="querymenu.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
