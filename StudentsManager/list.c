@@ -47,10 +47,16 @@ void ListInsert(Node* pos, const Student* stu) {
 }
 
 // 尾插法（在链表尾部插入新学生）
-void ListPushBack(Node* pHead, const Student* stu) {
+int ListPushBack(Node* pHead, const Student* stu) {
     assert(pHead);
     // 在哨位头结点之前插入，即为尾插
+    if (!pHead)
+    {
+        printf("错误，头结点为空指针");
+        return 0;
+    }
     ListInsert(pHead, stu);
+    return 1;
 }
 
 // 删除 pos 位置的节点，不能删除哨位头结点

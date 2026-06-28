@@ -19,7 +19,7 @@ Node* ListCreate();
 void ListInsert(Node* pos, const Student* stu);
 
 // 尾插法（在链表尾部插入新学生）
-void ListPushBack(Node* pHead, const Student* stu);
+int ListPushBack(Node* pHead, const Student* stu);
 
 // 删除 pos 位置的节点，不能删除哨位头结点
 void ListErase(Node* pos);

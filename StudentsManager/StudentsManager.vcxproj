@@ -123,23 +123,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="filemanager.h" />
-    <ClInclude Include="jsonmanager.h" />
-    <ClInclude Include="list.h" />
+    <ClInclude Include="FileManager.h" />
+    <ClInclude Include="JsonManager.h" />
+    <ClInclude Include="List.h" />
     <ClInclude Include="main.h" />
-    <ClInclude Include="mainmenu.h" />
-    <ClInclude Include="query.h" />
-    <ClInclude Include="querymenu.h" />
-    <ClInclude Include="student.h" />
+    <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="Query.h" />
+    <ClInclude Include="QueryMenu.h" />
+    <ClInclude Include="Student.h" />
+    <ClInclude Include="UserCommandService.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="filemanager.c" />
-    <ClCompile Include="jsonmanager.c" />
-    <ClCompile Include="list.c" />
+    <ClCompile Include="FileManager.c" />
+    <ClCompile Include="JsonManager.c" />
+    <ClCompile Include="List.c" />
     <ClCompile Include="main.c" />
-    <ClCompile Include="mainmenu.c" />
-    <ClCompile Include="query.c" />
-    <ClCompile Include="querymenu.c" />
+    <ClCompile Include="MainMenu.c" />
+    <ClCompile Include="Query.c" />
+    <ClCompile Include="QueryMenu.c" />
+    <ClCompile Include="UserCommandService.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

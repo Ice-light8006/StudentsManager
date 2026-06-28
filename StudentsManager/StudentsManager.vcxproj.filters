@@ -15,51 +15,57 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="list.h">
+    <ClInclude Include="List.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="student.h">
+    <ClInclude Include="Student.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="filemanager.h">
+    <ClInclude Include="FileManager.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="jsonmanager.h">
+    <ClInclude Include="JsonManager.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="query.h">
+    <ClInclude Include="Query.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="mainmenu.h">
+    <ClInclude Include="MainMenu.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="querymenu.h">
+    <ClInclude Include="QueryMenu.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="main.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="UserCommandService.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="list.c">
+    <ClCompile Include="List.c">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="main.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="filemanager.c">
+    <ClCompile Include="FileManager.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="jsonmanager.c">
+    <ClCompile Include="JsonManager.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="query.c">
+    <ClCompile Include="Query.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="mainmenu.c">
+    <ClCompile Include="MainMenu.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="querymenu.c">
+    <ClCompile Include="QueryMenu.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UserCommandService.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
