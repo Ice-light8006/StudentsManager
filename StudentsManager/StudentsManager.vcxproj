@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Display.h" />
     <ClInclude Include="FileManager.h" />
     <ClInclude Include="JsonManager.h" />
     <ClInclude Include="List.h" />
@@ -132,8 +133,10 @@
     <ClInclude Include="QueryMenu.h" />
     <ClInclude Include="Student.h" />
     <ClInclude Include="UserCommandService.h" />
+    <ClInclude Include="Utils.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Display.c" />
     <ClCompile Include="FileManager.c" />
     <ClCompile Include="JsonManager.c" />
     <ClCompile Include="List.c" />
@@ -142,6 +145,7 @@
     <ClCompile Include="Query.c" />
     <ClCompile Include="QueryMenu.c" />
     <ClCompile Include="UserCommandService.c" />
+    <ClCompile Include="Utils.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,6 +1,7 @@
 #ifndef __UTILS_H__
 #define __UTILS_H__
 #include <stdio.h>
+#include <string.h>
 
 /**
  * 从标准输入读取一行文本（可包含空格），并自动去掉末尾的换行符。

@@ -2,8 +2,14 @@
 #define __MAINMENU_H__
 #include <stdio.h>
 #include <stdlib.h>
-#define QUERY 1
-#define EXIT 0
+
+enum Operate
+{
+	EXIT = 0,
+	QUERY = 1,
+	ADD = 2,
+	DELETE = 3
+};
 
 void showMainMenu();
 

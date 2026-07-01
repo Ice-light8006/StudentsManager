@@ -1,6 +1,7 @@
-#include "querymenu.h"
-#include "query.h"
+#include "Querymenu.h"
+#include "Query.h"
 #include "main.h"
+#include "Utils.h"
 
 static void turnToQueryMenu()
 {
@@ -24,21 +25,21 @@ void showQueryMenu()
 
 void choseQueryOperate()
 {
-	printf("请输入你的操作序号：");
 	int flag = 1;
 	while (flag)
 	{
+		printf("请输入你的操作序号：");
 		int op;
-		char nametmp[32];
+		char nametmp[64];
 		int yeartmp = -1;
 		scanf("%d", &op);
+		//清空输入缓冲区
+		while (getchar() != '\n');
 		switch (op)
 		{
 		case QUERYNAME:
-			// 清掉可能残留在缓冲区的换行符
-			while (getchar() != '\n');
 			printf("请输入姓名：");
-			if (fgets(nametmp, sizeof(nametmp), stdin))
+			if (!get_line(nametmp, sizeof(nametmp)))//这个函数成功返回0
 			{
 				// 去掉末尾的换行符
 				size_t len = strlen(nametmp);
@@ -51,28 +52,29 @@ void choseQueryOperate()
 					continue;
 				}
 			}
-			system("pause");
+			turnToQueryMenu();
 			break;
 		case QUERYBIRTHYEAR:
 			printf("请输入生日年份：\n");
-			scanf("%d", yeartmp);
+			scanf("%d", &yeartmp);
 			system("cls");
 			if (!ShowAllSameBirthYear(head, yeartmp))
 			{
 				turnToQueryMenu();
 				continue;
 			}
-			system("pause");
+			turnToQueryMenu();
 			break;
 		case QUERYENROLLMENT:
 			printf("请输入入学年份：\n");
-			scanf("%d", yeartmp);
+			scanf("%d", &yeartmp);
 			system("cls");
 			if (!ShowAllSameEnrollmentYear(head, yeartmp))
 			{
 				turnToQueryMenu();
 				continue;
 			}
+			turnToQueryMenu();
 			break;
 		case QUERYALL:
 			system("cls");
@@ -81,7 +83,7 @@ void choseQueryOperate()
 				turnToQueryMenu();
 				continue;
 			}
-			system("pause");
+			turnToQueryMenu();
 			break;
 		case QUERYEXIT:
 			flag = 0;

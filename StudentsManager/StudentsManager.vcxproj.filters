@@ -42,6 +42,12 @@
     <ClInclude Include="UserCommandService.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Display.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="List.c">
@@ -66,6 +72,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="UserCommandService.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Display.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

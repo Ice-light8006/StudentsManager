@@ -203,6 +203,7 @@ int ListGetLength(Node* pHead)
     while (tmp->next != pHead)
     {
         cnt++;
+        tmp = tmp->next;
     }
     return cnt;
 }
