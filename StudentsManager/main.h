@@ -6,6 +6,7 @@
 #include "query.h"
 #include "jsonmanager.h"
 #include "mainmenu.h"
+#include <time.h>
 
 extern Node* head;//只是声明，要在main.c里定义
 

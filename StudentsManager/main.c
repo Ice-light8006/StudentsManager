@@ -4,7 +4,8 @@ Node* head;
 
 int main(int argc, char** argv)
 {
-	//程序启动时，初始化链表，并读取json文件的数据
+	//程序启动时，初始化链表，并读取json文件的数据，并设置随机种子
+	srand((unsigned)time(NULL));
 	head = ListCreate();
 	char* stuInfo = getStuInfo();
 	parse_students_from_json_array(stuInfo, head);

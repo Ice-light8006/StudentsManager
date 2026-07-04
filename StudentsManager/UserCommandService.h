@@ -8,11 +8,19 @@
 #include "Utils.h"
 #include "QueryMenu.h"
 #include "Display.h"
+#include "Query.h"
+#include <time.h>
 
 //返回0表示添加失败，返回非0表示添加成功
 int addStudent(Node* pHead);
 
 //返回0表示删除失败，返回1表示删除成功
 int deleteStudent(Node* pHead);
+
+//随机抽学生模块
+void randomPickStudent(Node* pHead);
+
+//修改信息模块
+int Modify(Node* pHead);
 
 #endif

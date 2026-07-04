@@ -188,7 +188,7 @@ void ListModifyEnrollmentYear(Node* pHead, const char* stuId, int enrollmentYear
     Node* target = ListFind(pHead, stuId);
     if (target) {
         target->stu.enrollmentYear = enrollmentYear;
-        printf("学号 %s 的地址已修改为 %d\n", stuId, enrollmentYear);
+        printf("学号 %s 的入学年份已修改为 %d\n", stuId, enrollmentYear);
     }
     else {
         printf("未找到学号为 %s 的学生，无法修改\n", stuId);

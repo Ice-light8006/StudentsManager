@@ -2,6 +2,7 @@
 #define __UTILS_H__
 #include <stdio.h>
 #include <string.h>
+#include <time.h>
 
 /**
  * 从标准输入读取一行文本（可包含空格），并自动去掉末尾的换行符。
@@ -14,5 +15,13 @@
  * @return         成功返回 0，遇到文件末尾（EOF）返回 -1
  */
 int get_line(char* buf, size_t buf_size);
+
+int isDateValid(int year, int month, int day);
+
+int isYearValid(int year);
+
+int isGenderValid(char Gender);
+
+void clearInputBuffer(void);
 
 #endif

@@ -6,6 +6,11 @@
 char* getStuInfo()
 {
 	FILE* stuInfoFile = fopen(STUINFOFILE, "r");
+	if (stuInfoFile == NULL)
+	{
+		//如果文件不存在，返回空值，后面main.c会自动处理这个空值
+		return NULL;
+	}
 	int len = 0;
 	int capacity = 64;
 	char* result = (char*)malloc(capacity);
@@ -44,7 +49,6 @@ int writeStuInfo(char* text)
 	if (stuInfoFile == NULL)
 	{
 		perror("文件打开失败");
-		fclose(stuInfoFile);
 		return -1;
 	}
 	if (fputs(text, stuInfoFile) == EOF) {

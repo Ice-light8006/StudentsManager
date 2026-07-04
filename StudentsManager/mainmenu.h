@@ -6,9 +6,12 @@
 enum Operate
 {
 	EXIT = 0,
-	QUERY = 1,
-	ADD = 2,
-	DELETE = 3
+	QUERY = 4,
+	ADD = 1,
+	DELETE = 2,
+	PICK = 5,
+	MODIFY = 3
+
 };
 
 void showMainMenu();

@@ -45,9 +45,6 @@ void ListModifyEmail(Node* pHead, const char* stuId, const char* newEmail);
 // 按学号修改学生地址
 void ListModifyAddress(Node* pHead, const char* stuId, const char* newAddress);
 
-// 按学号修改学生地址
-void ListModifyAddress(Node* pHead, const char* stuId, const char* newAddress);
-
 // 按学号修改学生入学年份
 void ListModifyEnrollmentYear(Node* pHead, const char* stuId, int enrollmentYear);
 
