@@ -124,7 +124,7 @@ int parse_students_from_json_array(const char* json_str, Node* pHead) {
     // 找到数组开始的 '['
     while (*p && (*p == ' ' || *p == '\t' || *p == '\n' || *p == '\r')) p++;
     if (*p != '[') {
-        printf("JSON 数据不是一个数组。\n");
+        printf("  \033[31mJSON 数据不是一个数组。\033[0m\n");
         return 0;
     }
     p++;  // 跳过 '['
@@ -135,7 +135,7 @@ int parse_students_from_json_array(const char* json_str, Node* pHead) {
         while (*p && (*p == ' ' || *p == '\t' || *p == '\n' || *p == '\r' || *p == ',')) p++;
         if (*p == ']') break;   // 数组结束
         if (*p != '{') {
-            printf("警告：预期对象起始 '{'，但找到 '%c'\n", *p);
+            printf("  \033[31m警告：预期对象起始 '{'，但找到 '%c'\033[0m\n", *p);
             break;
         }
 
@@ -159,13 +159,13 @@ int parse_students_from_json_array(const char* json_str, Node* pHead) {
             p++;
         }
         if (brace != 0) {
-            printf("警告：对象括号不匹配\n");
+            printf("  \033[31m警告：对象括号不匹配\033[0m\n");
             break;
         }
 
         int len = p - start;
         if (len >= (int)sizeof(obj_buf)) {
-            printf("警告：单个对象过长，跳过\n");
+            printf("  \033[31m警告：单个对象过长，跳过\033[0m\n");
             continue;
         }
         strncpy(obj_buf, start, len);

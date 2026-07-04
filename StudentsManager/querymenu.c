@@ -35,7 +35,7 @@ void showQueryMenu()
 
 	// 4. 底部边界线，让输入提示位于线下方
 	printf("  \033[36m===========================================\033[0m\n");
-	printf("\033[0m"); // 重置颜色，防止污染后续输入提示
+	printf("\033[0m"); // 重置颜色
 }
 
 void choseQueryOperate()
@@ -43,7 +43,7 @@ void choseQueryOperate()
 	int flag = 1;
 	while (flag)
 	{
-		printf("请输入你的操作序号：");
+		printf("\n  \033[33m请输入你的操作序号：\033[0m");
 		int op;
 		char nametmp[64];
 		int yeartmp = -1;
@@ -53,8 +53,8 @@ void choseQueryOperate()
 		switch (op)
 		{
 		case QUERYNAME:
-			printf("请输入姓名：");
-			if (!get_line(nametmp, sizeof(nametmp)))//这个函数成功返回0
+			printf("  \033[33m请输入姓名：\033[0m");
+			if (!get_line(nametmp, sizeof(nametmp)))
 			{
 				// 去掉末尾的换行符
 				size_t len = strlen(nametmp);
@@ -70,7 +70,7 @@ void choseQueryOperate()
 			turnToQueryMenu();
 			break;
 		case QUERYBIRTHYEAR:
-			printf("请输入生日年份：\n");
+			printf("  \033[33m请输入生日年份：\033[0m\n");
 			scanf("%d", &yeartmp);
 			system("cls");
 			if (!ShowAllSameBirthYear(head, yeartmp))
@@ -81,7 +81,7 @@ void choseQueryOperate()
 			turnToQueryMenu();
 			break;
 		case QUERYENROLLMENT:
-			printf("请输入入学年份：\n");
+			printf("  \033[33m请输入入学年份：\033[0m\n");
 			scanf("%d", &yeartmp);
 			system("cls");
 			if (!ShowAllSameEnrollmentYear(head, yeartmp))
@@ -105,7 +105,7 @@ void choseQueryOperate()
 			system("cls");
 			break;
 		default:
-			printf("输入非法，请重新输入s\n");
+			printf("  \033[31m输入非法，请重新输入！\033[0m\n");
 			continue;
 		}
 	}
